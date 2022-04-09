@@ -21,11 +21,12 @@ predict = "G3" #also known as a label
 #Training data to predict another value
 x = np.array(data.drop([predict], 1))
 y = np.array(data[predict])
-x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size= 0.1)
 
 #taking attributes and splitting them into four different arrays 
 #the test are to test the accuracy of our model
+x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size= 0.1)
 
+'''
 best = 0
 for _ in range(30):
 
@@ -45,7 +46,7 @@ for _ in range(30):
         with open('studentmodel.pickle','wb') as f:
             pickle.dump(linear, f)
 
-
+'''
 
 #reading model file
 pickle_in = open('studentmodel.pickle', 'rb')
